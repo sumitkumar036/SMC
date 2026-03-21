@@ -96,3 +96,68 @@ body {
 /* Instead of changing the whole BG, we just change a small border or the icon color */
 .Toastify__toast--success { border-left: 6px solid #10b981 !important; }
 .Toastify__toast--error { border-left: 6px solid #ef4444 !important; }
+
+@layer utilities {
+  @keyframes heartFall {
+    0% {
+      transform: translateY(-5vh) translateX(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% { opacity: 1; }
+    50% { transform: translateY(50vh) translateX(-30px) rotate(-180deg); }
+    100% {
+      transform: translateY(110vh) translateX(0px) rotate(-360deg);
+      opacity: 0;
+    }
+  }
+
+  .animate-heart-fall {
+    animation: heartFall linear infinite;
+    display: inline-block;
+  }
+
+ @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move only 50% because we doubled the content */
+  }
+
+  .animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .pause-on-hover:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+  /* Gold Text Effect */
+  .text-gold-gradient {
+    background: linear-gradient(to right, #fde047, #f59e0b, #fde047);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes metallic {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .bg-metallic-gold {
+    /* Metallic gradient with highlights and shadows */
+    background: linear-gradient(
+      90deg, 
+      #450a0a 0%,    /* Deep Maroon */
+      #7f1d1d 20%,   /* Mid Red */
+      #b91c1c 45%,   /* Bright Highlight */
+      #ef4444 50%,   /* Center Shine */
+      #b91c1c 55%,   /* Bright Highlight */
+      #7f1d1d 80%,   /* Mid Red */
+      #450a0a 100%   /* Deep Maroon */
+    );
+    background-size: 200% 100%;
+    animation: metallic 5s linear infinite;
+  }
+
+}
