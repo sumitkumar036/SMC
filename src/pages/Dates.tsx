@@ -52,7 +52,7 @@ const Dates: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {/* Tile 1 */}
           <div className="border-2 border-red-200 dark:border-red-900 rounded-3xl p-4 text-center bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-            <h3 className="text-2xl font-extrabold mb-1">शुभ तिलक प्रस्थान</h3>
+            <h3 className="text-2xl font-extrabold mb-1">शुभ तिलक</h3>
             <p className="text-lg font-bold">दिनांक 28.04.2026</p>
             <p className="text-base">( मंगलवार )</p>
           </div>
@@ -66,9 +66,9 @@ const Dates: React.FC = () => {
 
           {/* Tile 3 */}
           <div className="border-2 border-red-200 dark:border-red-900 rounded-3xl p-4 text-center bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-            <h3 className="text-2xl font-extrabold mb-1">मेंहदी एवं संगीत</h3>
+            <h3 className="text-2xl font-extrabold mb-1">घृतधारी एवं देवपूजन</h3>
             <p className="text-lg font-bold">दिनांक 02.05.2026</p>
-            <p className="text-base">( गुरुवार )</p>
+            <p className="text-base">( शनिवार )</p>
           </div>
 
 
@@ -90,7 +90,7 @@ const Dates: React.FC = () => {
         {/* Notes and Poetry */}
         <div className="space-y-6 text-center border-t-2 border-b-2 border-red-100 py-6 mb-8">
           <p className="text-lg font-bold leading-relaxed">
-            नोट:- बारात दिनांक 03.05.2026 को सुरक्षित वाहन द्वारा अपने निवास स्थान ग्राम- रायपुरा से ग्राम- रजवरिया के लिए शाम 04:00 बजे प्रस्थान करेगी।
+            नोट:- बारात दिनांक 03.05.2026 को सुरक्षित वाहन द्वारा अपने निवास स्थान ग्राम- रायपुरा से ग्राम- रजवरीया कला के लिए शाम 04:00 बजे प्रस्थान करेगी।
           </p>
           
           <div className="italic text-red-700 dark:text-red-400 font-bold">

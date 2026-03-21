@@ -36,8 +36,9 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
         {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-sm md:text-base font-semibold text-red-800 dark:text-red-200">
           <div className="text-left mb-4 md:mb-0 leading-tight">
-           मंगलम् भगवान विष्णु:<br/>
-           मंगलम् पुण्डरीकाक्ष:
+           वक्रतुण्ड महाकाय <br/> 
+           निर्विघ्नं कुरु मे देव
+
           </div>
           
           <div className="flex-shrink-0">
@@ -47,15 +48,15 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
           </div>
 
           <div className="text-right mt-4 md:mt-0 leading-tight">
-            मंगलम् गरुड़ध्वज: !<br/>
-            मंगलाय तनो हरि: !!
+            सूर्यकोटि समप्रभ। !<br/>
+             सर्वकार्येषु सर्वदा!! !!
           </div>
         </div>
 
         {/* Intro Message */}
         <div className="text-center font-bold text-lg md:text-xl mb-10 text-red-800 dark:text-red-200">
           <span className="block text-left ml-4 md:ml-12 mb-1">स्नेही स्वजन,</span>
-          परमपिता परमेश्वर एवं माँ दुर्गा की असीम अनुकम्पा से,
+          परमपिता परमेश्वर की असीम अनुकम्पा से,
         </div>
 
         {/* Groom Section */}
@@ -101,8 +102,8 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
           </h1>
           <div className="text-base md:text-lg font-semibold space-y-1">
             <p>सुपुत्री- श्रीमती शान्ति देवी एवं श्री संजय सिंह</p>
-            <p>ग्राम+पोस्ट- रजवरिया</p>
-            <p>थाना- नवीनगर</p>
+            <p>ग्राम+पोस्ट- रजवरीया कला</p>
+            <p>थाना- नबीनगर</p>
             <p>जिला- औरंगाबाद (बिहार)</p>
           </div>
         </div>
@@ -113,16 +114,16 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
             के
           </div>
           <div className="bg-red-800 dark:bg-red-900 text-white px-10 py-1.5 rounded-full font-bold text-xl shadow-md flex items-center gap-4 border-2 border-red-900 dark:border-red-200">
-            <span>❦</span> परिणयोत्सव <span>❦</span>
+            <span>❦</span> मांगलिक परिणयोत्सव <span>❦</span>
           </div>
         </div>
 
         <div className='border-2 border-red-200 dark:border-red-900 rounded-3xl p-4 text-center bg-white/50 dark:bg-slate-800/50'>
 
           {/* Main Invitation Message */}
-          <div className="text-center font-bold text-lg md:text-xl mb-12 leading-relaxed">
-            की लग्न मांगलिक वेलाओं में आपकी सपरिवार उपस्थिति<br/>
-            एवं स्नेहाशीष हेतु हमारा साग्रह आमंत्रण स्वीकार करें।
+          <div className="text-center font-bold text-lg md:text-xl mb-4 leading-relaxed text-red-900 dark:text-red-100">
+            की शुभ बेला में सपरिवार उपस्थित होकर वर-वधू <br />
+            को अपने आशीर्वादों से अनुगृहीत करें।
           </div>
 
 

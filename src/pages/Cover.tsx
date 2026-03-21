@@ -62,11 +62,11 @@ const Cover: React.FC = () => {
               </div>
               <div className="border-2 border-red-800 dark:border-red-700 p-3 text-center w-40 bg-white/60 dark:bg-slate-800/60 z-10 -mt-1 shadow-md backdrop-blur-sm">
                  <div className="flex items-center justify-center gap-2">
-                   <div className="rounded-full border-2 border-red-800 dark:border-red-400 w-10 h-10 flex items-center justify-center font-bold text-xl">3</div>
+                   {/* <div className="rounded-full border-2 border-red-800 dark:border-red-400 w-10 h-10 flex items-center justify-center font-bold text-xl">3</div> */}
                    <div className="text-xl font-bold leading-none">शुभ विवाह</div>
                  </div>
                  <div className="mt-2 text-lg font-bold border-t border-red-800 dark:border-red-700 pt-1">
-                   मई 2026
+                  3 मई 2026
                  </div>
                  <div className="text-sm font-semibold italic">(रविवार)</div>
               </div>
