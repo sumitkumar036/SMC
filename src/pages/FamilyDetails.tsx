@@ -2,6 +2,7 @@ import React from 'react';
 
 // For this code to run properly with the watermark, you must add a suitable 
 // watermark image (e.g., card.jpeg) to your Vite project's 'public' directory.
+import MantraHeader from '../components/MantraHeader';
 
 interface WeddingInvitationProps {
   brideName?: string;
@@ -28,10 +29,8 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
       {/* Content Layer */}
       <div className="relative z-10 p-6 md:p-12 text-red-900 dark:text-red-100 border border-red-100 dark:border-slate-800">
         
-        {/* Top Mantra */}
-        <div className="text-center font-bold text-xl mb-6 tracking-widest text-red-800 dark:text-red-200">
-          ॥ 卐 ॥ श्री गणेशाय नम: ॥ 卐 ॥
-        </div>
+     {/* Top Mantra Header */}
+<MantraHeader />
 
         {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-sm md:text-base font-semibold text-red-800 dark:text-red-200">
@@ -48,7 +47,7 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
           </div>
 
           <div className="text-right mt-4 md:mt-0 leading-tight">
-            सूर्यकोटि समप्रभ। !<br/>
+            सूर्यकोटि समप्रभ !<br/>
              सर्वकार्येषु सर्वदा!! !!
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import MantraHeader from '../components/MantraHeader';
 
 const Dates: React.FC = () => {
   return (
@@ -17,10 +18,9 @@ const Dates: React.FC = () => {
       {/* Content Layer */}
       <div className="relative z-10 p-6 md:p-12 text-red-900 dark:text-red-100 border border-red-100 dark:border-slate-800">
         
-        {/* Top Mantra */}
-        <div className="text-center font-bold text-xl mb-6 tracking-widest text-red-800 dark:text-red-200">
-          ॥ 卐 ॥ श्री गणेशाय नम: ॥ 卐 ॥
-        </div>
+  
+            {/* Top Mantra Header */}
+<MantraHeader />
 
           {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-sm md:text-base font-semibold text-red-800 dark:text-red-200">
@@ -94,7 +94,7 @@ const Dates: React.FC = () => {
           </p>
           
           <div className="italic text-red-700 dark:text-red-400 font-bold">
-            "हल्दी है चंदन है रिश्तो का बंधन है। मेरे चाचा और मामा की शादी में आपका अभिनन्दन है.....चिन्मय,एली,इच्छा,खुशी"
+            "हल्दी है चंदन है रिश्तो का बंधन है। मेरे चाचा और मामा की शादी में आपका अभिनन्दन है.....चिन्मय,बुचन,एली,इच्छा,खुशी"
           </div>
         </div>
 
