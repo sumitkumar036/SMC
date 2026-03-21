@@ -74,7 +74,7 @@ const Dates: React.FC = () => {
 
           {/* Tile 4 */}
           <div className="border-2 border-red-200 dark:border-red-900 rounded-3xl p-4 text-center bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-            <h3 className="text-2xl font-extrabold mb-1">बारात प्रस्थान एवं शुभ विवाह</h3>
+            <h3 className="text-2xl font-extrabold mb-1">बारात प्रस्थान एवं रात्रि में शुभ विवाह</h3>
             <p className="text-lg font-bold">दिनांक 03.05.2026</p>
             <p className="text-base">( रविवार )</p>
           </div>
