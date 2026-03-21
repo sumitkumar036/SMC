@@ -23,24 +23,33 @@ const Footer: React.FC = () => {
 
   return (
     <footer
-      className={`fixed bottom-0 w-full transition-transform duration-300 z-40
+      className={`fixed bottom-0 w-full transition-transform duration-500 z-[60]
       ${visible ? "translate-y-0" : "translate-y-full"}
-      bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg`}
+      bg-white/80 dark:bg-slate-950/80 border-t border-red-200/50 dark:border-red-900/30 backdrop-blur-md shadow-[0_-10px_25px_rgba(128,0,0,0.1)]`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between text-sm">
+      <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[11px] md:text-sm">
         
-        {/* Copyright */}
-        <span className="text-gray-600 dark:text-gray-400 font-medium">
-          © {new Date().getFullYear()} <span className="text-blue-600 dark:text-cyan-400"></span>
-        </span>
+        {/* Left: Wedding Branding */}
+        <div className="flex items-center gap-2">
+          <span className="text-red-800 dark:text-red-400 font-bold">
+            © {new Date().getFullYear()} 
+          </span>
+          <span className="hidden md:inline text-red-700 dark:text-red-200 font-medium tracking-tight">
+             Sumit <span className="text-red-500">❤</span> Kanti
+          </span>
+        </div>
 
-        {/* Version Tag - Now visible on all screens */}
-         <div className="flex justify-end min-w-[50px]">
-          <span className="text-[12px] uppercase tracking-widest text-gray-400 dark:text-gray-400 hover:text-blue-400 font-medium">
+        {/* Center: Blessing (Desktop only for cleanliness) */}
+        <div className="hidden sm:block text-red-900/60 dark:text-red-200/40 italic font-hindi">
+          ॥ सप्रेम निमंत्रण ॥
+        </div>
+
+        {/* Right: Version Tag */}
+        <div className="flex items-center gap-4">
+          <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-red-900/50 dark:text-slate-500 font-black">
             v{version}
           </span>
-
-         </div>
+        </div>
       </div>
     </footer>
   );
