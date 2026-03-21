@@ -97,28 +97,43 @@ body {
 .Toastify__toast--success { border-left: 6px solid #10b981 !important; }
 .Toastify__toast--error { border-left: 6px solid #ef4444 !important; }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer utilities {
+  /* Falling & Spinning Heart Animation */
   @keyframes heartFall {
     0% {
-      transform: translateY(-5vh) translateX(0px) rotate(0deg);
+      transform: translateY(-10vh) translateX(0px) rotate(0deg);
       opacity: 0;
     }
-    10% { opacity: 1; }
-    50% { transform: translateY(50vh) translateX(-30px) rotate(-180deg); }
+    10% { opacity: 0.8; }
+    25% { transform: translateY(25vh) translateX(25px) rotate(45deg); }
+    50% { transform: translateY(50vh) translateX(-25px) rotate(-45deg); }
+    75% { transform: translateY(75vh) translateX(25px) rotate(25deg); }
     100% {
-      transform: translateY(110vh) translateX(0px) rotate(-360deg);
+      transform: translateY(110vh) translateX(0px) rotate(0deg);
       opacity: 0;
     }
+  }
+
+  /* Seamless Marquee Animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Metallic Shimmer for the Marquee Background */
+  @keyframes metallic {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
   }
 
   .animate-heart-fall {
     animation: heartFall linear infinite;
+    pointer-events: none; 
     display: inline-block;
-  }
-
- @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Move only 50% because we doubled the content */
   }
 
   .animate-marquee {
@@ -127,37 +142,16 @@ body {
     animation: marquee 25s linear infinite;
   }
 
-  /* Pause animation on hover */
   .pause-on-hover:hover .animate-marquee {
     animation-play-state: paused;
   }
 
-  /* Gold Text Effect */
-  .text-gold-gradient {
-    background: linear-gradient(to right, #fde047, #f59e0b, #fde047);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes metallic {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-
   .bg-metallic-gold {
-    /* Metallic gradient with highlights and shadows */
     background: linear-gradient(
       90deg, 
-      #450a0a 0%,    /* Deep Maroon */
-      #7f1d1d 20%,   /* Mid Red */
-      #b91c1c 45%,   /* Bright Highlight */
-      #ef4444 50%,   /* Center Shine */
-      #b91c1c 55%,   /* Bright Highlight */
-      #7f1d1d 80%,   /* Mid Red */
-      #450a0a 100%   /* Deep Maroon */
+      #450a0a 0%, #7f1d1d 20%, #b91c1c 45%, #ef4444 50%, #b91c1c 55%, #7f1d1d 80%, #450a0a 100%
     );
     background-size: 200% 100%;
     animation: metallic 5s linear infinite;
   }
-
 }
