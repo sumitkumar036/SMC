@@ -130,7 +130,7 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
           <div className="text-center mb-10 relative">
               <div className="font-extrabold text-xl mb-3">-: आकांक्षी :-</div>
               <div className="text-lg font-semibold">
-                अशोक सिंह, विनोद सिंह<br/> अलोक सिंह, छोटू सिंह
+                अशोक सिंह, बिनोद सिंह<br/> अलोक सिंह, छोटू सिंह
               </div>
           </div>
 
