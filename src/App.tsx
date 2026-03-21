@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <Routes>
            
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
 
           </Routes>
         </div>

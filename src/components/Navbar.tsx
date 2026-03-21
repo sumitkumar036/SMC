@@ -32,9 +32,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           
           {/* Logo */}
-          <NavLink to="/home" className="flex items-center gap-2 group">
+          <NavLink to="/" className="flex items-center gap-2 group">
             <span className="text-2xl transition-transform group-hover:scale-110">📚</span>
-            <span className="font-bold text-xl text-gray-900 dark:text-white">LibraryMS</span>
+            <span className="font-bold text-xl text-gray-900 dark:text-white">SUMIT MARRIAGE CARD</span>
           </NavLink>
 
           <div className="flex items-center gap-4">
