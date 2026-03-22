@@ -1,40 +1,42 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import disableDevtool from 'disable-devtool';
 
 const Footer: React.FC = () => {
   const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0); // Use a ref to avoid triggering useEffect on every scroll
 
-  // Loading your custom Env variables
   const version = import.meta.env.VITE_APP_VERSION || "1.0.0";
-  const isProduction = import.meta.env.VITE_PRODUCTION === true;
+  const isProduction = import.meta.env.VITE_PRODUCTION === "true";
 
   useEffect(() => {
-    // --- DISABLE DEVTOOLS BASED ON YOUR ENV VAR ---
+    // 1. DevTool Protection
     if (isProduction) {
       disableDevtool({
         clearLog: true,
         disableMenu: true,
-        // Shows a message in console before clearing
-        tk: 'Access Restricted', 
-        // Stops the execution of the page if devtools is forced open
         disableCut: true,
         disableCopy: true,
+     
       });
     }
 
+    // 2. Optimized Scroll Logic
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      const currentScrollY = window.scrollY;
+
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
         setVisible(false);
       } else {
         setVisible(true);
       }
-      setLastScrollY(window.scrollY);
+      
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, isProduction]);
+  }, [isProduction]); // Only re-run if production status changes
 
   return (
     <footer
