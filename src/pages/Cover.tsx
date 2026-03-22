@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cover: React.FC = () => {
   return (
-    <div className="relative w-[95%] md:max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-900 border border-red-100 dark:border-slate-800 my-4">
+    <div className="relative w-[95%] md:max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-800/50 border border-red-100 dark:border-slate-800 my-4">
       
       {/* Background Watermark Layer */}
       <div 
@@ -91,7 +91,7 @@ const Cover: React.FC = () => {
             <div className="text-sm font-medium text-red-800 dark:text-red-200 opacity-90">
               <p>ग्राम- रायपुरा, पोस्ट- रामबिलाश नगर</p>
               <p>जिला- औरंगाबाद (बिहार)</p>
-              <p className="font-bold pt-1">मो०- 9934971225, 8986415336</p>
+              <p className="font-bold pt-1">मो०- 9934971225, 8986415336, 8822342345</p>
             </div>
           </div>
 

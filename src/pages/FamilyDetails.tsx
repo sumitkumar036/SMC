@@ -13,7 +13,8 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
 }) => {
   return (
     /* Added w-[95%] for mobile spacing */
-    <div className="relative w-[95%] md:w-full max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-900 border border-red-100 dark:border-slate-800 my-4">
+        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-800/50 border border-red-100 dark:border-slate-800 my-4">
+
       
       {/* Background Watermark Layer */}
       <div 
@@ -66,7 +67,8 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
 
           <h1 className="text-3xl md:text-4xl font-extrabold mb-3">
             <span className="text-xl md:text-2xl font-semibold mr-2 block md:inline">आयुष्मान्</span> 
-            {groomName}
+            {groomName} 
+            <span className="text-[12px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(Software Engineer)</span>
           </h1>
           <div className="text-sm md:text-lg font-semibold space-y-1">
             <p>सुपुत्र- श्रीमती ललिता देवी एवं श्री नेपाल सिंह</p>
@@ -134,13 +136,22 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
               आयुष सिंह, निशांत सिंह, रिशांक सिंह<br className="hidden md:block"/>
               चिन्मय सिंह एवं समस्त सिंह परिवार।
             </div>
+
+            
             
             <div className="font-semibold text-sm md:text-lg w-full md:w-1/2 flex flex-col items-center md:items-end">
               <div className="font-extrabold text-lg md:text-xl mb-3">-: स्वागताकांक्षी :-</div>
               <div className="text-md md:text-lg font-semibold md:text-right">
-                रंजीत सिंह, संजीत सिंह<br/>संजय सिंह
+                रंजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(SAIL)</span><br/> 
+                संजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span><br/>
+                संजय सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span>
               </div>
             </div>
+
+
+
+
+
           </div>
         </div>
 

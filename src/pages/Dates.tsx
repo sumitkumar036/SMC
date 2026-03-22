@@ -68,7 +68,7 @@ const Dates: React.FC = () => {
 
           {/* Tile 3 */}
           <div className="border-2 border-red-200 dark:border-red-900 rounded-3xl p-4 text-center bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-            <h3 className="text-xl md:text-2xl font-extrabold mb-1">घृतधारी एवं देवपूजन</h3>
+            <h3 className="text-xl md:text-2xl font-extrabold mb-1">घृतढारी एवं देवपूजन</h3>
             <p className="text-lg font-bold">दिनांक 02.05.2026</p>
             <p className="text-base">( शनिवार )</p>
           </div>
@@ -88,7 +88,7 @@ const Dates: React.FC = () => {
           </p>
           
           <div className="italic text-red-700 dark:text-red-400 font-bold px-2 text-sm md:text-base">
-            "हल्दी है चंदन है रिश्तो का बंधन है। मेरे चाचा और मामा की शादी में आपका अभिनन्दन है.....चिन्मय,बुचन,एली,इच्छा,खुशी"
+            "हल्दी है चंदन है रिश्तो का बंधन है। मेरे मामा और चाचा की शादी में आपका अभिनन्दन है.....खुशी,लक्की,इच्छा,एली,बुचन,चिन्मय"
           </div>
         </div>
 
