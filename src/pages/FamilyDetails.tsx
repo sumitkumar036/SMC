@@ -122,9 +122,11 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
 
           {/* Akankshi */}
           <div className="text-center mb-10">
-              <div className="font-extrabold text-lg md:text-xl mb-3">-: आकांक्षी :-</div>
-              <div className="text-md md:text-lg font-semibold">
-                अशोक सिंह, बिनोद सिंह<br/> अलोक सिंह, छोटू सिंह
+                       <div className="font-extrabold text-lg md:text-xl mb-3">-: स्वागताकांक्षी :-</div>
+              <div className="text-md md:text-lg font-semibold md:text-center">
+                रंजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(SAIL)</span><br/> 
+                संजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span><br/>
+                संजय सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span>
               </div>
           </div>
 
@@ -140,12 +142,11 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
             
             
             <div className="font-semibold text-sm md:text-lg w-full md:w-1/2 flex flex-col items-center md:items-end">
-              <div className="font-extrabold text-lg md:text-xl mb-3">-: स्वागताकांक्षी :-</div>
-              <div className="text-md md:text-lg font-semibold md:text-right">
-                रंजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(SAIL)</span><br/> 
-                संजीत सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span><br/>
-                संजय सिंह <span className="text-[10px] md:text-xs italic text-red-700 dark:text-red-400 font-bold opacity-80">(IAF)</span>
+             <div className="font-extrabold text-lg md:text-xl mb-3">-: आकांक्षी :-</div>
+              <div className="text-md md:text-lg font-semibold">
+                अशोक सिंह, बिनोद सिंह<br/> अलोक सिंह, छोटू सिंह
               </div>
+    
             </div>
 
 
