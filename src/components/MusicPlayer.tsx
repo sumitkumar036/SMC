@@ -34,30 +34,30 @@ const MusicPlayer: React.FC = () => {
 परमपिता परमेश्वर की असीम अनुकम्पा से, हमारे परिवार में *सुमित और कान्ति* का शुभ विवाह संस्कार तय हुआ है। इस मांगलिक अवसर पर आप सपरिवार सादर आमंत्रित हैं।`;
 
   // --- SMART SHARE LOGIC (IMAGE + TEXT CAPTION) ---
-  const handleShare = async () => {
-    try {
-      const response = await fetch(card_image);
-      const blob = await response.blob();
-      const file = new File([blob], "WeddingInvite.png", { type: "image/png" });
+  // const handleShare = async () => {
+  //   try {
+  //     const response = await fetch(card_image);
+  //     const blob = await response.blob();
+  //     const file = new File([blob], "WeddingInvite.png", { type: "image/png" });
 
-      // If mobile device supports sharing files
-      if (navigator.share && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          files: [file],
-          title: 'Wedding Invitation',
-          text: weddingMessage, // This automatically becomes the WhatsApp caption
-        });
-      } else {
-        // Fallback for Desktop/WhatsApp Web (Sends Text only)
-        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(weddingMessage)}`;
-        window.open(whatsappUrl, '_blank');
-      }
-    } catch (error) {
-      console.error("Sharing failed", error);
-      // Basic fallback to text if image fetch fails
-      window.open(`https://wa.me/?text=${encodeURIComponent(weddingMessage)}`, '_blank');
-    }
-  };
+  //     // If mobile device supports sharing files
+  //     if (navigator.share && navigator.canShare({ files: [file] })) {
+  //       await navigator.share({
+  //         files: [file],
+  //         title: 'Wedding Invitation',
+  //         text: weddingMessage, // This automatically becomes the WhatsApp caption
+  //       });
+  //     } else {
+  //       // Fallback for Desktop/WhatsApp Web (Sends Text only)
+  //       const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(weddingMessage)}`;
+  //       window.open(whatsappUrl, '_blank');
+  //     }
+  //   } catch (error) {
+  //     console.error("Sharing failed", error);
+  //     // Basic fallback to text if image fetch fails
+  //     window.open(`https://wa.me/?text=${encodeURIComponent(weddingMessage)}`, '_blank');
+  //   }
+  // };
 
   const togglePlay = () => {
     if (audioRef.current) {
