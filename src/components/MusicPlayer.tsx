@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import kehne from '../audio/bgm.mp3';
-import card_image from "../assets/marriage_card.png";
+//import card_image from "../assets/marriage_card.png";
 
 const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -27,11 +27,11 @@ const MusicPlayer: React.FC = () => {
   }, []);
 
 
-  const weddingMessage = `।। श्री गणेशाय नमः ।।
-*प्रेषित:* सुमित एवं कान्ति
+//   const weddingMessage = `।। श्री गणेशाय नमः ।।
+// *प्रेषित:* सुमित एवं कान्ति
 
-🚩 *स्नेही स्वजन,*
-परमपिता परमेश्वर की असीम अनुकम्पा से, हमारे परिवार में *सुमित और कान्ति* का शुभ विवाह संस्कार तय हुआ है। इस मांगलिक अवसर पर आप सपरिवार सादर आमंत्रित हैं।`;
+// 🚩 *स्नेही स्वजन,*
+// परमपिता परमेश्वर की असीम अनुकम्पा से, हमारे परिवार में *सुमित और कान्ति* का शुभ विवाह संस्कार तय हुआ है। इस मांगलिक अवसर पर आप सपरिवार सादर आमंत्रित हैं।`;
 
   // --- SMART SHARE LOGIC (IMAGE + TEXT CAPTION) ---
   // const handleShare = async () => {
