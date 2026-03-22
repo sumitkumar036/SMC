@@ -1,14 +1,29 @@
 import { useEffect, useState } from "react";
+import disableDevtool from 'disable-devtool';
 
 const Footer: React.FC = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  // Loading your custom Env variables
   const version = import.meta.env.VITE_APP_VERSION || "1.0.0";
+  const isProduction = import.meta.env.VITE_PRODUCTION === true;
 
   useEffect(() => {
+    // --- DISABLE DEVTOOLS BASED ON YOUR ENV VAR ---
+    if (isProduction) {
+      disableDevtool({
+        clearLog: true,
+        disableMenu: true,
+        // Shows a message in console before clearing
+        tk: 'Access Restricted', 
+        // Stops the execution of the page if devtools is forced open
+        disableCut: true,
+        disableCopy: true,
+      });
+    }
+
     const handleScroll = () => {
-      // Hide on scroll down, show on scroll up
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
         setVisible(false);
       } else {
@@ -19,7 +34,7 @@ const Footer: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isProduction]);
 
   return (
     <footer
@@ -29,22 +44,19 @@ const Footer: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between text-[11px] md:text-sm">
         
-        {/* Left: Wedding Branding */}
         <div className="flex items-center gap-2">
           <span className="text-red-800 dark:text-red-400 font-bold">
             © {new Date().getFullYear()} 
           </span>
           <span className="hidden md:inline text-red-700 dark:text-red-200 font-medium tracking-tight">
-             Sumit <span className="text-red-500">❤</span> Kanti
+              Sumit <span className="text-red-500">❤</span> Kanti
           </span>
         </div>
 
-        {/* Center: Blessing (Desktop only for cleanliness) */}
         <div className="hidden sm:block text-red-900/60 dark:text-red-200/40 italic font-hindi">
           ॥ सप्रेम निमंत्रण ॥
         </div>
 
-        {/* Right: Version Tag */}
         <div className="flex items-center gap-4">
           <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-red-900/50 dark:text-slate-500 font-black">
             v{version}

@@ -135,7 +135,7 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
             <div className="font-semibold text-sm md:text-lg w-full md:w-1/2">
               <div className="font-extrabold text-lg md:text-xl mb-3">-: दर्शनाभिलाषी :-</div>
               सोनू सिंह, प्रिंस सिंह, विशाल सिंह,<br className="hidden md:block"/>
-              आयुष सिंह, निशांत सिंह, रिशांक सिंह<br className="hidden md:block"/>
+              आयुष सिंह, निशांत सिंह, रिशांक सिंह, <br className="hidden md:block"/>
               चिन्मय सिंह एवं समस्त सिंह परिवार।
             </div>
 
