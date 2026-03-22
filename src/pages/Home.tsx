@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import FamilyDetails from "./FamilyDetails";
 import Cover from "./Cover";
 import Dates from "./Dates";
-import ganeshBg from '../../public/icon.png'; 
+import ganeshBg from '../assets/icon.png';
+import MusicPlayer from "../components/MusicPlayer";
 
 const Home: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Cover");
@@ -92,6 +93,8 @@ const Home: React.FC = () => {
           )}
         </div>
       </div>
+
+      <MusicPlayer />
 
     </div>
   );

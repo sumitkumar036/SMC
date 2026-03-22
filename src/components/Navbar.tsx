@@ -4,7 +4,7 @@ import { LuMoon, LuSun, LuMenu, LuX } from "react-icons/lu";
 import { useThemeStore } from "../store/globalStore";
 import { toast } from "react-toastify";
 import { Cookies } from '../services/Cookies';
-import navIcon from '../../public/icon.png'; // Renamed to avoid confusion with the <img> tag
+import navIcon from '../assets/icon.png'; // Renamed to avoid confusion with the <img> tag
 
 const Navbar = () => {
   const { theme, toggleTheme } = useThemeStore();
