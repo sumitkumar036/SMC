@@ -13,7 +13,7 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
 }) => {
   return (
     /* Added w-[95%] for mobile spacing */
-        <div className="relative w-[95%] md:w-full max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-800/50 border border-red-100 dark:border-slate-800 my-4">
+        <div className="relative w-[95%] md:w-full max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed bg-white dark:bg-slate-800/50 border border-red-100 dark:border-slate-800 my-4">
 
       
       {/* Background Watermark Layer */}

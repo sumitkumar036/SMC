@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import FamilyDetails from "./FamilyDetails";
 import Cover from "./Cover";
 import Dates from "./Dates";
+import TravelDetails from "./TravelDetails"; // New Component
 import ganeshBg from '../assets/icon.png';
 import MusicPlayer from "../components/MusicPlayer";
 
 const Home: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Cover");
-  const tabs = ["Cover", "Dates", "Family Details"];
+  const [activeTab, setActiveTab] = useState("All");
+  // Added "Travel" to your tabs list
+  const tabs = ["All", "Cover", "Dates", "Family Details", "Travel"];
 
-  // Generate 40 dynamic hearts for the overlay snowfall
   const hearts = Array.from({ length: 40 }).map((_, i) => ({
     id: i,
     left: `${Math.random() * 100}%`,
@@ -21,8 +22,7 @@ const Home: React.FC = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center py-4 md:py-8 px-2 overflow-x-hidden bg-transparent">
       
-      {/* --- LAYER 1: Central Ganesh Ji (Subtle 15% Opacity) --- */}
-      {/* Lowered opacity to 0.15 for a soft watermark effect that doesn't compete with text */}
+      {/* --- LAYER 1: Central Ganesh Ji --- */}
       <div className="fixed inset-0 z-[51] pointer-events-none flex items-center justify-center overflow-hidden px-4">
         <div className="w-[90%] max-w-[620px] opacity-[0.1] transition-all duration-1000 ease-in-out">
           <img 
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* --- LAYER 2: Falling Hearts Overlay (z-50) --- */}
+      {/* --- LAYER 2: Falling Hearts --- */}
       <div className="fixed inset-0 z-50 pointer-events-none overflow-hidden text-red-600/60 dark:text-white/50">
         {hearts.map((heart) => (
           <div
@@ -45,37 +45,34 @@ const Home: React.FC = () => {
               animationDelay: heart.delay,
               top: '-10%'
             }}
-          >
-            ❤
-          </div>
+          >❤</div>
         ))}
       </div>
 
-      {/* --- LAYER 3: Metallic Marquee (z-40) --- */}
-      <div className="fixed top-16 md:top-20 left-0 w-full z-40 bg-metallic-gold border-y-[1.5px] border-yellow-500/60 shadow-xl backdrop-blur-sm overflow-hidden py-2 group pause-on-hover cursor-pointer">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></div>
+      {/* --- LAYER 3: Metallic Marquee (Keeping your current positioning) --- */}
+      <div className="fixed top-16 md:top-18 left-0 w-full z-40 bg-metallic-gold border-y-[1.5px] border-yellow-500/60 shadow-xl backdrop-blur-sm overflow-hidden py-2">
         <div className="animate-marquee inline-block whitespace-nowrap relative z-10">
           {[1, 2].map((i) => (
             <span key={i} className="text-white dark:text-yellow-50 font-black text-sm md:text-lg italic tracking-widest px-4">
               ✦ वैवाहिक कार्यक्रम में आपका हार्दिक स्वागत है ✦ &nbsp;&nbsp;&nbsp;&nbsp; 
-              🌹 <span className="text-yellow-200 uppercase">सुमित और कान्ति</span> के परिणयोत्सव में पधारकर आशीर्वाद दें 🌹 &nbsp;&nbsp;&nbsp;&nbsp; 
-              <span className="bg-black/20 px-4 py-1 rounded-full border border-yellow-400/40 shadow-inner">📅 3 मई 2026 - रविवार</span>
+              🌹 <span className="text-yellow-200 uppercase">सुमित और कान्ति</span> 🌹 &nbsp;&nbsp;&nbsp;&nbsp; 
+              <span className="bg-black/20 px-4 py-1 rounded-full border border-yellow-400/40 shadow-inner">📅 3 मई 2026</span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           ))}
         </div>
       </div>
 
-      {/* --- LAYER 4: Navigation Bar --- */}
-      <div className="relative z-40 flex space-x-1 md:space-x-2 bg-white/70 dark:bg-slate-900/70 p-1.5 rounded-full shadow-2xl border border-red-200/50 dark:border-slate-700 mt-24 mb-10 w-full max-w-md backdrop-blur-xl">
+      {/* --- LAYER 4: Navigation Bar (Keeping your current mt-8) --- */}
+      <div className="sticky top-8 z-[20] flex space-x-1 md:space-x-2 bg-white/70 dark:bg-slate-900/70 p-1.5 rounded-full shadow-2xl border border-red-200/50 dark:border-slate-700 mt-8 mb-6 w-full max-w-lg backdrop-blur-xl mx-auto overflow-x-auto no-scrollbar">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 py-2.5 px-1 md:px-4 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ease-out active:scale-95 ${
+            className={`whitespace-nowrap flex-1 py-2 px-2 md:px-4 rounded-full font-bold text-[10px] md:text-sm transition-all duration-300 ${
               activeTab === tab
-                ? "bg-gradient-to-r from-red-900 via-red-800 to-red-900 dark:from-slate-100 dark:via-white dark:to-slate-100 text-white dark:text-slate-900 shadow-lg scale-105"
-                : "text-red-900 dark:text-slate-300 hover:bg-red-500/10 dark:hover:bg-white/10"
+                ? "bg-red-900 text-white shadow-lg scale-105"
+                : "text-red-900 dark:text-slate-300 hover:bg-red-500/10"
             }`}
           >
             {tab}
@@ -84,18 +81,35 @@ const Home: React.FC = () => {
       </div>
 
       {/* --- LAYER 5: Content Area --- */}
-      <div className="relative z-10 w-full flex justify-center transition-all duration-500 ease-in-out">
-        <div className="w-full max-w-4xl flex justify-center px-1">
-          {activeTab === "Cover" && <Cover />}
-          {activeTab === "Dates" && <Dates />}
-          {activeTab === "Family Details" && (
-            <FamilyDetails brideName="कान्ति कुमारी" groomName="सुमित कुमार" />
+      <div className="relative z-10 w-full transition-all duration-500 ease-in-out">
+        <div className="w-full max-w-4xl mx-auto px-1 flex flex-col items-center pb-20">
+          
+          {/* Individual Tab Views */}
+          {activeTab === "Cover" && <div className="w-full animate-fade-in"><Cover /></div>}
+          {activeTab === "Dates" && <div className="w-full animate-fade-in"><Dates /></div>}
+          {activeTab === "Family Details" && <div className="w-full animate-fade-in"><FamilyDetails brideName="कान्ति कुमारी" groomName="सुमित कुमार" /></div>}
+          {activeTab === "Travel" && <div className="w-full animate-fade-in"><TravelDetails /></div>}
+
+          {/* "All" Tab View - Tight Spacing preserved */}
+          {activeTab === "All" && (
+            <div className="flex flex-col items-center w-full space-y-4 -mt-4 animate-fade-in">
+              <section className="w-full"><Cover /></section>
+              <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-red-800/20 to-transparent" />
+              
+              <section className="w-full"><Dates /></section>
+              <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-red-800/20 to-transparent" />
+              
+              {/* Integrated Travel into the All View */}
+              <section className="w-full"><FamilyDetails brideName="कान्ति कुमारी" groomName="सुमित कुमार" /></section>
+              <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-red-800/20 to-transparent" />
+              <section className="w-full"><TravelDetails /></section>
+
+            </div>
           )}
         </div>
       </div>
 
       <MusicPlayer />
-
     </div>
   );
 };

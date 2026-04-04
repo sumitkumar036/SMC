@@ -4,7 +4,7 @@ import MantraHeader from '../components/MantraHeader';
 const Dates: React.FC = () => {
   return (
     /* Added w-[95%] for mobile to ensure a small margin on the sides */
-    <div className="relative w-[95%] md:w-full max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed dark:bg-slate-800/50 my-4">
+    <div className="relative w-[95%] md:w-full max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden font-hindi leading-relaxed dark:bg-slate-800/50 my-4">
       
       {/* Background Watermark Layer */}
       <div 
