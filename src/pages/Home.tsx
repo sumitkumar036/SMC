@@ -54,7 +54,7 @@ const Home: React.FC = () => {
         <div className="animate-marquee inline-block whitespace-nowrap relative z-10">
           {[1, 2].map((i) => (
             <span key={i} className="text-white dark:text-yellow-50 font-black text-sm md:text-lg italic tracking-widest px-4">
-              ✦ वैवाहिक कार्यक्रम में आपका हार्दिक स्वागत है ✦ &nbsp;&nbsp;&nbsp;&nbsp; 
+              ❤ वैवाहिक कार्यक्रम में आपका हार्दिक स्वागत है ❤ &nbsp;&nbsp;&nbsp;&nbsp; 
               🌹 <span className="text-yellow-200 uppercase">सुमित और कान्ति</span> 🌹 &nbsp;&nbsp;&nbsp;&nbsp; 
               <span className="bg-black/20 px-4 py-1 rounded-full border border-yellow-400/40 shadow-inner">📅 3 मई 2026</span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
