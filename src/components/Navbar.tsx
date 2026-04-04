@@ -4,7 +4,8 @@ import { LuMoon, LuSun, LuMenu, LuX } from "react-icons/lu";
 import { useThemeStore } from "../store/globalStore";
 import { toast } from "react-toastify";
 import { Cookies } from '../services/Cookies';
-import navIcon from '../assets/icon.png'; // Renamed to avoid confusion with the <img> tag
+import navIcon from '../assets/icon.png';
+import DownloadButton from "./DownloadButton";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useThemeStore();
@@ -32,14 +33,12 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <NavLink to="/" className="flex items-center gap-2 md:gap-3 group">
-            {/* The Icon/Image */}
             <div className="relative h-8 w-8 md:h-10 md:w-10 overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(234,179,8,0.8)]">
               <img src={navIcon} alt="Ganesh Icon" className="h-full w-full object-contain" />
             </div>
 
-            {/* The Metallic Text */}
             <div className="flex flex-col">
-              <span className="font-black text-sm md:text-lg leading-none tracking-tighter bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 bg-clip-text text-transparent dark:from-amber-500 dark:via-yellow-200 dark:to-amber-500 drop-shadow-sm group-hover:drop-shadow-md transition-all">
+              <span className="font-black text-sm md:text-lg leading-none tracking-tighter bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 bg-clip-text text-transparent dark:from-amber-500 dark:via-yellow-200 dark:to-amber-500 drop-shadow-sm group-hover:drop-shadow-md transition-all uppercase">
                 SUMIT <span className="text-red-700 dark:text-red-400">❤</span> KANTI
               </span>
               <span className="text-[10px] md:text-xs font-bold text-red-800 dark:text-slate-400 tracking-[0.2em] uppercase opacity-80">
@@ -48,8 +47,13 @@ const Navbar = () => {
             </div>
           </NavLink>
 
-          {/* Actions Section */}
+          {/* Desktop & Action Section */}
           <div className="flex items-center gap-2 md:gap-4">
+            {/* Desktop Only Download Button */}
+            <div className="hidden md:block">
+              <DownloadButton variant="minimal" />
+            </div>
+
             {/* Theme Toggle */}
             <button
               onClick={toggleSelectedTheme}
@@ -70,12 +74,23 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown (Optional but keeps it clean) */}
+      {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-red-100 dark:border-slate-800 p-4 shadow-xl animate-in slide-in-from-top duration-300">
-           <p className="text-center text-sm font-bold text-red-800 dark:text-red-200">
-             ✨ Welcome to our digital invitation ✨
-           </p>
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-red-100 dark:border-slate-800 p-6 shadow-xl animate-in slide-in-from-top duration-300">
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-center text-sm font-bold text-red-800 dark:text-red-200 italic">
+                ✨ Welcome to our digital invitation ✨
+              </p>
+              
+              {/* Prominent Download Button in Mobile Menu */}
+              <div onClick={() => setIsOpen(false)}>
+                <DownloadButton variant="solid" className="w-full justify-center py-3" />
+              </div>
+
+              <p className="text-[10px] text-slate-400 uppercase tracking-widest">
+                Save the card to your gallery
+              </p>
+            </div>
         </div>
       )}
     </nav>
