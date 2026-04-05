@@ -7,7 +7,6 @@ const Cover: React.FC = () => {
       {/* Background Watermark Layer */}
       <div 
         className="absolute inset-0 opacity-10 dark:opacity-20 z-0 bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: 'url("/card.jpeg")' }}
       >
         <div className="absolute inset-0 flex justify-center items-center">
             <svg className="w-[80%] h-[80%] text-red-100 dark:text-red-950/20" fill="currentColor" viewBox="0 0 24 24">

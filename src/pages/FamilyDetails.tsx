@@ -19,7 +19,6 @@ const FamilyDetails: React.FC<WeddingInvitationProps> = ({
       {/* Background Watermark Layer */}
       <div 
         className="absolute inset-0 opacity-10 dark:opacity-20 z-0 bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: 'url("/card.jpeg")' }}
       >
         <div className="absolute inset-0 flex justify-center items-center">
             <svg className="w-[80%] h-[80%] text-red-100 dark:text-red-950/20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
